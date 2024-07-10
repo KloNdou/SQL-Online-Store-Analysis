@@ -610,6 +610,24 @@ FROM MonthlySales
 WHERE RowNum = 1
 ORDER BY Year, Month;
 
+/* 
+
+- The improvement in the website where we added suggestions of accessories and maintenance products is working well as our average order value is more than 514.35 while previous year client told us it was less than 430.
+
+- Would suggest to send more budget towards Hong Kong as it seems to be performing better compared to Spain even though the brand is more known in Spain and also we spend more in Spain than in Hong kong.
+
+- California with half of the advertising budget of New York brings nearly 50% more revenue than New York. Will suggest to increase the advertising budget for California.
+
+- ROAS indicates that we have space for more budget increase in all the markets.
+
+- To discus with the client: Reduce Cart Abandonment: Implement strategies such as retargeting ads, email reminders, and simplifying the checkout process to reduce cart abandonment rates.
+Optimize Checkout Process: Ensure the checkout process is smooth, quick, and user-friendly. Reduce unnecessary steps and provide multiple payment options.
+Increase Incentives: Offer discounts, free shipping, or other incentives to encourage users to complete their purchases. 
+
+- In the months where we were consistent with the email campaigns we yielded high number of sales and revenue. 
+We need to discus with the client email marketing strategies.
+
+*/
 
 
 

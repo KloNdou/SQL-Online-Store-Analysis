@@ -5,10 +5,10 @@ This project involves analyzing various datasets to extract meaningful insights 
 
 ## Datasets
 
-* CountryRegionData: Contains metrics such as users, new users, average engagement time, eCommerce purchases, purchase revenue, add-to-carts, checkouts, and quantity by country and region.
-* FunnelDataTLBMallorca: Contains metrics related to the funnel steps, device category, active users, completion rate, abandonments, and abandonment rate.
-* GoogleAdsData: Contains Google Ads campaign data including sessions, users, engaged sessions, average engagement time per session, conversions, event count, and total revenue.
-* SessionSourceData: Contains session data by source and medium including users, sessions, engaged sessions, events per session, engagement rate, event count, and conversions
+* **CountryRegionData**: Contains metrics such as users, new users, average engagement time, eCommerce purchases, purchase revenue, add-to-carts, checkouts, and quantity by country and region.
+* **FunnelDataTLBMallorca**: Contains metrics related to the funnel steps, device category, active users, completion rate, abandonments, and abandonment rate.
+* **GoogleAdsData**: Contains Google Ads campaign data including sessions, users, engaged sessions, average engagement time per session, conversions, event count, and total revenue.
+* **SessionSourceData**: Contains session data by source and medium including users, sessions, engaged sessions, events per session, engagement rate, event count, and conversions
 
 ## Analysis Summary
 

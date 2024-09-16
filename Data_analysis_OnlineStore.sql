@@ -1,6 +1,6 @@
 
 
---The database we will explore and analyse today contains many tables. I will select 4 of them an create a view with them to do analysis.
+--The database we will explore and analyse today contains many tables. I will select 4 of them and create a view with them to do analysis.
 --The tables are:
 
 --CountryRegionData:

@@ -4,7 +4,7 @@ SELECT *
 FROM Countrydata
 
 Select *
-From [Funnel data TLB_Mallorca]
+From [Funnel data TLM]
 
 -- Checking Decimal Places in Countrydata
 -- Update Engagement_rate, Average_engagement_time, Total_revenue, Tax_amount to have 2, 1, 1, 1 decimal places respectively
@@ -35,7 +35,7 @@ Update CountryRegionData
 /* for a temporary change I could use this too: */
 
 Select Cast (Completion_rate AS INT)
-From [Funnel data TLB_Mallorca]
+From [Funnel data TLM]
 
 /*Checking for null values in different tables */
 
@@ -54,7 +54,7 @@ OR Checkouts IS NULL
 OR PURCHASES IS NULL
 
 Select *
-	From [Funnel data TLB_Mallorca]
+	From [Funnel data TLM]
 Where Step is NUll
 	OR Device_category IS NULL
 	OR Active_users IS NULL
@@ -65,29 +65,29 @@ Where Step is NUll
 -- Handling missing Values in Funnel data table 
 -- In the second table I have null values which I intend to clean
 
-Update [Funnel data TLB_Mallorca]
+Update [Funnel data TLM]
 	Set Completion_rate = COALESCE(Completion_rate, '') 
 
-Update [Funnel data TLB_Mallorca]
+Update [Funnel data TLM]
 	Set Abandonments = COALESCE (Abandonments, 0)
 
-ALTER TABLE [Funnel data TLB_Mallorca]
+ALTER TABLE [Funnel data TLM]
 	ADD CONSTRAINT DF_Completion_rate DEFAULT '' FOR Completion_rate;
 
-UPDATE [Funnel data TLB_Mallorca]
+UPDATE [Funnel data TLM]
 	SET Abandonment_rate = '0'
 WHERE Abandonment_rate IS NULL;
 
 /* Since in our case zero values would affect the analysis will completely ignore the zero values with this query: */
 
 SELECT *
-	FROM [Funnel data TLB_Mallorca]
+	FROM [Funnel data TLM]
 WHERE 
 	Completion_rate <> 0
 	Or Abandonment_rate <> 0
 	OR Abandonments <> 0
 
-DELETE FROM [Funnel data TLB_Mallorca]
+DELETE FROM [Funnel data TLM]
 	WHERE Completion_rate = 0;
 
 
@@ -183,22 +183,22 @@ WHERE DuplicateCount > 1;
   Checking for and handling data with excessive decimal places.
 */
 
--- View all data in the Funnel data TLB_Mallorca table (for reference).
+-- View all data in the Funnel data TLM table (for reference).
 
-Select * from [Funnel data TLB_Mallorca];
+Select * from [Funnel data TLM];
 
 
--- Update the Completion_rate column in the Funnel data TLB_Mallorca table.
+-- Update the Completion_rate column in the Funnel data TLM table.
 -- Round the values to 2 decimal places for improved readability and potential storage efficiency.
 
-Update [Funnel data TLB_Mallorca]
+Update [Funnel data TLM]
 Set Completion_rate = ROUND(Completion_rate,2);
 
 
--- Update the Abandonment_rate column in the Funnel data TLB_Mallorca table.
+-- Update the Abandonment_rate column in the Funnel data TLM table.
 -- Round the values to 2 decimal places for consistency and potential storage efficiency.
 
-Update [Funnel data TLB_Mallorca]
+Update [Funnel data TLM]
 Set Abandonment_rate = ROUND(Abandonment_rate,2);
 
 
@@ -223,12 +223,12 @@ ADD Item_name_new VARCHAR(255);
 -- If there is no hyphen in the item name, the entire original name is copied to the new column.
 
 UPDATE Purchase_data
-SET Item_name_new = 
-  CASE 
-    WHEN CHARINDEX('-', Item_name) > 0  -- Check if there's a hyphen in the name
-      THEN SUBSTRING(Item_name, 1, CHARINDEX('-', Item_name) - 1)  -- Extract everything before the hyphen
-    ELSE Item_name  -- If no hyphen, copy the entire name
-  END;
+SET Item_name_new =Â 
+Â Â CASEÂ 
+Â Â Â Â WHEN CHARINDEX('-', Item_name) > 0Â  -- Check if there's a hyphen in the name
+Â Â Â Â Â Â THEN SUBSTRING(Item_name, 1, CHARINDEX('-', Item_name) - 1)  -- Extract everything before the hyphen
+Â Â Â Â ELSE Item_name  -- If no hyphen, copy the entire name
+Â Â END;
 
 -- This ALTER TABLE statement removes the original Item_name column from the Purchase_data table.
 -- It's assumed that after populating the Item_name_new column with the desired data, the original Item_name column is no longer needed.

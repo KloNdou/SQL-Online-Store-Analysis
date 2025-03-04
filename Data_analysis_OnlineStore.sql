@@ -12,7 +12,7 @@
 --Checkouts, Quantity)
 
 
---Funnel data TLB_Mallorca:
+--Funnel data TLM:
 
 --(Step, Device_category, Active_users, 
 --Completion_rate, Abandoments, 

@@ -1,50 +1,15 @@
-# SQL Data Analysis Project
+# SQL-Driven eCommerce Performance & Marketing Effectiveness Analysis
 
-## Overview
-This project focuses on analyzing various datasets to derive actionable insights related to eCommerce performance. The analysis encompasses key areas such as sales, revenue, user engagement, and advertising effectiveness. The datasets utilized include CountryRegionData, FunnelDataTL, GoogleAdsData, and SessionSourceData.
+## Tools:
+SQL Server, Advanced Aggregations, Joins, Window Functions, ROAS Calculation
 
-## Datasets
+Executed a comprehensive SQL-based analysis of multiple datasets covering eCommerce sales, customer engagement, advertising performance, and conversion funnel efficiency.
 
-* **CountryRegionData**: Provides metrics such as users, new users, average engagement time, eCommerce purchases, purchase revenue, add-to-carts, checkouts, and quantity segmented by country and region.
-* **FunnelDataTL**: Contains metrics related to funnel steps, device categories, active users, completion rates, abandonments, and abandonment rates.
-* **GoogleAdsData**: Includes Google Ads campaign data, detailing sessions, users, engaged sessions, average engagement time per session, conversions, event counts, and total revenue.
-* **SessionSourceData**: Comprises session data categorized by source and medium, including users, sessions, engaged sessions, events per session, engagement rates, event counts, and conversions.
+## Key Contributions & Results:
 
-## Analysis Summary
-
-### Revenue and Sales Analysis:
-* Compiled and analyzed key performance indicators (KPIs) to assess the previous year's performance.
-* Calculated total revenue, total sales, and average order value, providing a comprehensive overview of financial health.
-* Evaluated fluctuations in user metrics, new users, sales, and revenue to identify trends and variances.
-
-  ### Product Performance:
-
-* Identified top-selling products and analyzed their contribution to total revenue and sales.
-* Focused on specific products, such as shoe trees, to assess their impact on overall sales and revenue.
-
-
-### Country and Region Performance:
-
-* Analyzed sales and revenue by country and region, identifying top-performing areas.
-* Recommended adjustments to advertising budgets based on regional performance insights.
-
-
-### Advertising Performance:
-
-* Calculated Return on Ad Spend (ROAS) and conducted comparative analysis across regions.
-* Evaluated the correlation between total ROAS and Google Ads attributed ROAS to assess advertising effectiveness..
-
-  
-### Funnel Analysis:
-
-* Analyzed conversion rates throughout the funnel, from add-to-carts to checkouts and completed purchases.
-* Identified regions with high conversion rates and proposed improvements to enhance performance.
-
-  
-### Session Source Analysis:
-
-* Assessed user engagement by session source medium, identifying top sources for purchases and revenue.
-* Provided insights on the influence of referral sources on overall performance.
-
-
-
+* Created SQL queries to calculate KPIs including total revenue, total sales, AOV, and Google Ads ROAS.
+* Segmented product performance to identify top-selling SKUs and assess their contribution to revenue.
+* Analysed sales by country and region to identify top-performing geographies and advised budget reallocation to improve ROI.
+* Mapped customer behaviour across the funnel, identifying conversion bottlenecks and high-performing stages by region.
+* Compared ROAS from Google Ads against total ROAS to assess attribution accuracy and guide ad spend optimisation.
+* Evaluated acquisition channels by session engagement and purchase contribution, highlighting the most profitable traffic sources.
